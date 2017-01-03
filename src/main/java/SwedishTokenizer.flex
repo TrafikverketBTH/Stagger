@@ -15,6 +15,8 @@ SwedishSuffix   = ( ' s ) |
 SwedishWord     = ( {LatinOrDigit}+ - )* {LatinOrDigit}+
                   ( {SwedishSuffix} | - )?
 SwedishAbbr     = ( t \.? " "? ex \.? ) |
+				  ( ex \.? ) |
+				  ( m \.? " "? m \.? ) |
                   ( bl \.? " "? a \.? ) |
                   ( m \.? " "? fl \.? ) |
                   ( ( f | e ) \.? " "? kr \.? ) |
