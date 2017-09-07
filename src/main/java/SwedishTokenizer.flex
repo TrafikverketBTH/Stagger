@@ -86,7 +86,7 @@ public ArrayList<Token> readSentence() throws IOException {
 {SwedishWord}       {
     return(new Token(Token.TOK_LATIN,yytext(),yychar)); }
 {SectionRef}		{
-	return(new Token(Token.TOK_SECTION,yytext(),yychar)); }
+	return(new Token(Token.TOK_NUMBER,yytext(),yychar)); }
 {LatinWord}         {
     return(new Token(Token.TOK_LATIN,yytext(),yychar)); }
 {SwedishNumber}     {
