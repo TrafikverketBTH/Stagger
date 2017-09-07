@@ -26,6 +26,7 @@ SwedishAbbr     = ( t \.? " "? ex \.? ) |
                   ( fr \.? " "? o  \.? " "? m \.? ) |
                   ( ( etc | osv | ca ) \.? )
 Ordinal         = ( [0-9]+ ( :? e)? ) | ( [0-9]*[12] ( :? a )? )
+SectionRef		= [1-9][0-9]*(\.[1-9][0-9]*)+
 
 %{
 public ArrayList<Token> readSentence() throws IOException {
@@ -84,6 +85,8 @@ public ArrayList<Token> readSentence() throws IOException {
     return(new Token(Token.TOK_LATIN,yytext(),yychar)); }
 {SwedishWord}       {
     return(new Token(Token.TOK_LATIN,yytext(),yychar)); }
+{SectionRef}		{
+	return(new Token(Token.TOK_SECTION,yytext(),yychar)); }
 {LatinWord}         {
     return(new Token(Token.TOK_LATIN,yytext(),yychar)); }
 {SwedishNumber}     {

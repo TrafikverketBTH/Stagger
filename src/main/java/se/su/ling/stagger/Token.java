@@ -22,6 +22,7 @@ public class Token {
     public final static int TOK_NAGARI      = 18;
 
     public final static int TOK_TYPES       = 19;
+    public final static int TOK_SECTION		= 20;
 
     public final int type;
     public final String value;
